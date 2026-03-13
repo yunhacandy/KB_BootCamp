@@ -1,0 +1,13 @@
+fieldset{
+    width:450px;
+}
+
+.form-row{
+    margin:8px 0;
+}
+
+label{
+    display:inline-block;
+    width:100px;
+    text-align: center;
+}

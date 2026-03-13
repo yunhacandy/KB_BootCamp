@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <div id="container">
+      <p>첫 번째 단락</p>
+      <p>두 번째 단락</p>
+    </div>
+
+    <script>
+      const tags1 = document.getElementsByTagName('p'); // HTMLCollection
+      const tags2 = document.querySelectorAll('p'); // NodeList
+      console.log(tags1); // HTMLCollection(2) [p, p]
+      console.log(tags2); // NodeList(2) [p, p]
+
+      const newP = document.createElement('p');
+      newP.textContent = '세 번째';
+      document.getElementById('container').appendChild(newP);
+
+      console.log(tags1.length); // 3
+      console.log(tags2.length); // 2
+    </script>
+  </body>
+</html>

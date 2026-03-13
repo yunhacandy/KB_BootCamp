@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+    <fieldset>
+    <legend>회원가입</legend>
+    
+    <p>
+    <label>사용자 ID</label>
+    <input type="text" name="userid">
+    </p>
+
+    <p>
+    <label>비밀번호</label>
+    <input type="password" name="password">
+    </p>
+
+    <p>
+    <label>비밀번호 확인</label>
+    <input type="password" name="password_check">
+    </p>
+
+    <p>
+    <label>이름</label>
+    <input type="text" name="name">
+    </p>
+
+    <p>
+    <label>성별</label>
+    <input type="radio" name="gender" value="male"> 남
+    <input type="radio" name="gender" value="female"> 여
+    </p>
+
+    <p>
+    <label>취미</label>
+    <input type="checkbox" name="hobby" value="soccer"> 축구
+    <input type="checkbox" name="hobby" value="baseball"> 야구
+    <input type="checkbox" name="hobby" value="volleyball"> 배구
+    <input type="checkbox" name="hobby" value="basketball"> 농구
+    </p>
+
+    <p>
+    <label>email</label>
+    <input type="email" name="email">
+    </p>
+
+    <p>
+    <label>역할</label>
+    <select name="role">
+    <option value="admin">ADMIN</option>
+    <option value="manager">관리자</option>
+    <option value="user">일반회원</option>
+    </select>
+    </p>
+
+    <p>
+    <button type="submit">확인</button>
+    <button type="reset">다시쓰기</button>
+    </p>
+
+    </fieldset>
+    </form>
+</body>    
+</html>

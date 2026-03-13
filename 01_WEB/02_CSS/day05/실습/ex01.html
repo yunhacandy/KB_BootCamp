@@ -1,0 +1,17 @@
+<input type="text" value="100" />
+
+<!-- html 파일이기 때문에 js는 script 태그를 달고 적어야 함 -->
+<script>
+  var divElement = document.querySelector('input').value;
+  console.log(divElement);
+  console.log(typeof divElement);
+
+  var a = 10;
+  var b = '20';
+  console.log(typeof a);
+  console.log(typeof b);
+  console.log(b.length);
+  b = 10;
+  console.log(typeof b);
+  console.log(b.length);
+</script>

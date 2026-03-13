@@ -1,0 +1,14 @@
+.up {
+  background-color: indigo;
+  width: 100px;
+  height: 100px;
+}
+.down {
+  background-color: deeppink;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  /* relative는 자기 기준으로. absolute는 기준을 따른다 */
+  top: 20px;
+  opacity: 0.5;
+}

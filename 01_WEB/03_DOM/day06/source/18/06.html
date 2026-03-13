@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head></head>
+  <body>
+    <ul>
+      <li class="item" data-id="1">Item 1</li>
+      <li class="item" data-id="2">Item 2</li>
+      <li class="item" data-id="3" hidden>Item 3</li>
+    </ul>
+
+    <script>
+      const list = document.querySelectorAll('.item');
+      const newLi = document.createElement('li');
+      newLi.className = 'item';
+      newLi.textContent = 'Item 4';
+      document.querySelector('ul').appendChild(newLi);
+
+      console.log(list.length); // 여전히 3
+
+      button.addEventListener('click', () => {
+        const items = document.querySelectorAll('.item'); // 새로 탐색
+        items.forEach((el) => el.classList.add('updated'));
+      });
+    </script>
+  </body>
+</html>

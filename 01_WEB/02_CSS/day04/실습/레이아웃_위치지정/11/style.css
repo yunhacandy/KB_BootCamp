@@ -1,0 +1,21 @@
+.grandparent {
+  background-color: aqua;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.parent {
+  background-color: blueviolet;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 20px;
+}
+.child {
+  background-color: chartreuse;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  /* position값이 static이 아닌 가장 가까운 조상값 기준으로. */
+  top: 20px;
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head></head>
+  <body>
+    <ul>
+      <li class="menu-item active">Home</li>
+      <li class="menu-item">About</li>
+    </ul>
+
+    <script>
+      const items = document.getElementsByClassName('menu-item');
+      const menu = document.querySelector('ul');
+      const newItem = document.createElement('li');
+
+      const activeItem = document.getElementsByClassName('menu-item active');
+      console.log(activeItem.length); // 결과는 1
+    </script>
+  </body>
+</html>

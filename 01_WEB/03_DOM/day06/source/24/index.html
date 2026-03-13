@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      /* style.css */
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box active"></div>
+    <script>
+      const box = document.querySelector('.box');
+      console.log(box.className); // "box active"
+      box.className = 'box highlight'; // 전체 교체
+
+      box.classList.add('active');
+      box.classList.remove('hidden');
+      box.classList.toggle('highlight');
+      box.classList.contains('active'); // true / falses
+
+      const menuBtn = document.querySelector('#menuBtn');
+      const menu = document.querySelector('#sideMenu');
+
+      menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('open');
+      });
+
+      // box.style.backgroundColor = 'red';
+      // box.style.border = '1px solid black';
+
+      // items.forEach((item) => {
+      //   item.classList.add('highlight');
+      // });
+    </script>
+  </body>
+</html>

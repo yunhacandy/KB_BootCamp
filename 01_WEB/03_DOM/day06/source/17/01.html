@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head></head>
+  <body>
+    <ul>
+      <li class="menu-item">Home</li>
+      <li class="menu-item">About</li>
+      <li class="menu-item">Contact</li>
+    </ul>
+
+    <script>
+      const items = document.getElementsByClassName('menu-item');
+      const menu = document.querySelector('ul');
+      const newItem = document.createElement('li');
+      newItem.textContent = 'Blog';
+      newItem.className = 'menu-item';
+
+      document.querySelector('ul').appendChild(newItem);
+
+      console.log(items.length); // 자동으로 4개로 증가됨
+    </script>
+  </body>
+</html>

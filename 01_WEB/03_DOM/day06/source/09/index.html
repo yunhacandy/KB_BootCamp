@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <body>
+    <div id="box">
+      Hello <span>World</span
+      ><!-- 주석입니다 -->
+    </div>
+
+    <script>
+      const box = document.getElementById('box');
+
+      console.log(box.childNodes); // [Text, span, Comment]
+      console.log(box.attributes); // NamedNodeMap {0: id, id: "box"}
+      console.log(box.getAttribute('id')); // "box"
+      console.dir(box); // 객체 내부 구조 시각화
+    </script>
+  </body>
+</html>

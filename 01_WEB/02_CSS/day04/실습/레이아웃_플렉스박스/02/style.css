@@ -1,0 +1,12 @@
+body {
+  display: flex;
+  /* 나란히 배치됨 */
+}
+div {
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+}
+#second {
+  background-color: seagreen;
+}

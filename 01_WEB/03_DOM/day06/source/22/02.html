@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head></head>
+  <body>
+    <ul id="fruits">
+      <li>🍎 Apple</li>
+      <li id="banana">🍌 Banana</li>
+      <li>🍇 Grape</li>
+    </ul>
+
+    <script>
+      // this.parentNode.removeChild(this);
+      const banana = document.getElementById('banana');
+      //banana.remove();
+      banana.parentNode.removeChild(banana);
+    </script>
+  </body>
+</html>
