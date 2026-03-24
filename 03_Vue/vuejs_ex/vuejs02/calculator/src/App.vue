@@ -2,54 +2,78 @@
 export default {
   data() {
     return {
-      cur: '', //현재 입력값
-      output: '', //화면 출력값
+      cur: '',
+      output: '',
     };
   },
   methods: {
+    isOperator(value) {
+      return value === '+' || value === '-' || value === '*' || value === '/';
+    },
+
     operation(event) {
-      // console.log('click');
       const n = event.currentTarget.value;
 
-      //C버튼  reset  => cur , output
+      // C 버튼
       if (n === 'C') {
         this.cur = '';
         this.output = '';
         return;
       }
+
       // = 버튼
       if (n === '=') {
         this.calculate();
         return;
       }
 
-      this.cur = this.cur === null ? n : (this.cur += n);
+      // 현재 마지막 문자
+      const lastChar = this.cur[this.cur.length - 1];
 
-      // 숫자, 연산자, .  확인
+      // 연산자 중복 입력 방지
+      if (this.isOperator(n)) {
+        // 아무것도 입력되지 않은 상태에서 연산자 입력 막기
+        if (this.cur === '') {
+          return;
+        }
 
+        // 마지막 문자도 연산자라면, 마지막 연산자를 새 연산자로 교체
+        if (this.isOperator(lastChar)) {
+          this.cur = this.cur.slice(0, -1) + n;
+          this.output = this.cur;
+          return;
+        }
+      }
+
+      // 일반 입력
+      this.cur += n;
       this.output = this.cur;
     },
+
     calculate() {
       let operator = '';
 
-      // cur 안에 연산자를 찾기
       if (this.cur.includes('+')) {
         operator = '+';
-      } else if (this.cur.includes('*')) {
-        operator = '*';
       } else if (this.cur.includes('-')) {
         operator = '-';
+      } else if (this.cur.includes('*')) {
+        operator = '*';
       } else if (this.cur.includes('/')) {
         operator = '/';
       } else {
         return;
       }
 
-      //연산자를 기준으로 문자열 분리  split()
       const parts = this.cur.split(operator);
+
       const left = Number(parts[0]);
       const right = Number(parts[1]);
-      //연산 결과값을 저장할 변수 선언 : result =>초기화
+
+      if (parts[0] === '' || parts[1] === '') {
+        return;
+      }
+
       let result = 0;
 
       if (operator === '+') {
@@ -59,55 +83,47 @@ export default {
       } else if (operator === '*') {
         result = left * right;
       } else if (operator === '/') {
+        if (right === 0) {
+          this.output = '오류';
+          this.cur = '';
+          return;
+        }
         result = left / right;
       }
 
-      this.output = String(result);
       this.cur = String(result);
+      this.output = String(result);
     },
   },
 };
 </script>
+
 <template>
   <div class="calculator">
     <form name="forms">
       <input type="text" v-model="output" name="output" readonly />
-      <input type="button" class="clear" value="C" @click="operation($event)" />
-      <input
-        type="button"
-        class="operator"
-        value="/"
-        @click="operation($event)"
-      />
-      <input type="button" value="1" @click="operation($event)" />
-      <input type="button" value="2" @click="operation($event)" />
-      <input type="button" value="3" @click="operation($event)" />
-      <input
-        type="button"
-        class="operator"
-        value="*"
-        @click="operation($event)"
-      />
-      <input type="button" value="4" @click="operation($event)" />
-      <input type="button" value="5" @click="operation($event)" />
-      <input type="button" value="6" @click="operation($event)" />
-      <input type="button" class="operator" value="+" @click="operation($event)" />
-      <input type="button" value="7" @click="operation($event)" />
-      <input type="button" value="8" @click="operation($event)" />
-      <input type="button" value="9" @click="operation($event)" />
-      <input
-        type="button"
-        class="operator"
-        value="-"
-        @click="operation($event)"
-      />
-      <input type="button" class="dot" value="." @click="operation($event)" />
-      <input type="button" value="0" @click="operation($event)" />
+
+      <input type="button" class="clear" value="C" @click="operation" />
+      <input type="button" class="operator" value="/" @click="operation" />
+      <input type="button" value="1" @click="operation" />
+      <input type="button" value="2" @click="operation" />
+      <input type="button" value="3" @click="operation" />
+      <input type="button" class="operator" value="*" @click="operation" />
+      <input type="button" value="4" @click="operation" />
+      <input type="button" value="5" @click="operation" />
+      <input type="button" value="6" @click="operation" />
+      <input type="button" class="operator" value="+" @click="operation" />
+      <input type="button" value="7" @click="operation" />
+      <input type="button" value="8" @click="operation" />
+      <input type="button" value="9" @click="operation" />
+      <input type="button" class="operator" value="-" @click="operation" />
+      <input type="button" class="dot" value="." @click="operation" />
+      <input type="button" value="0" @click="operation" />
       <input
         type="button"
         class="operator result"
         value="="
-        @click="operation($event)"
+        @click="operation"
       />
     </form>
   </div>
