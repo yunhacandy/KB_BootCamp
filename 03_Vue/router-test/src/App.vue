@@ -1,7 +1,3 @@
-<script setup>
-import Header from './components/Header.vue';
-</script>
-
 <template>
   <div class="container">
     <Header />
@@ -9,13 +5,12 @@ import Header from './components/Header.vue';
   </div>
 </template>
 
+<script setup>
+import Header from './components/Header.vue';
+</script>
 <style>
 .container {
   text-align: center;
-  margin-top: 10px;
-}
-
-.card {
   margin-top: 10px;
 }
 </style>
