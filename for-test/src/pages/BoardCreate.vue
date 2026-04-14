@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import ref from 'vue';
+import useRouter from 'vue-router';
 import axios from 'axios';
 
 const router = useRouter();
@@ -38,7 +38,7 @@ const back = () => {
     <div class="form-group">
       <label for="title">제목</label>
       <input id="title" v-model="board.title" type="text" />
-      <!-- v-mode: 입력값과 데이터 자동 동기화 -->
+      <!-- v-model: 입력값과 데이터 자동 동기화 -->
     </div>
 
     <div class="form-group">

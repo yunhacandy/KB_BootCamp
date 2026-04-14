@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import BoardListItem from '@/components/BoardListItem.vue';
 
-const boards = ref([]); //값이 변화면 화면 자동 업데이트
+const boards = ref([]); //값이 변하면 화면 자동 업데이트
 
 const load = async () => {
   try {
