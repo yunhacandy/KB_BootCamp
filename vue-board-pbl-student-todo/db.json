@@ -1,0 +1,19 @@
+{
+  "boards": [
+    {
+      "id": "1",
+      "title": "Vue 게시판 첫 글",
+      "content": "json-server와 Vue Router를 연습해 봅시다.",
+      "writer": "관리자",
+      "createdAt": "2026-04-09"
+    },
+    {
+      "id": "2",
+      "title": "두 번째 글",
+      "content": "수정과 삭제 기능까지 완성해 보세요.",
+      "writer": "학생1",
+      "createdAt": "2026-04-09"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
