@@ -1,4 +1,4 @@
-package ExceptionPratice;
+package ch11;
 
 import java.util.Scanner;
 
