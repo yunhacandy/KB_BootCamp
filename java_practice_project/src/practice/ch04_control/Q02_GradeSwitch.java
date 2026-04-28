@@ -16,7 +16,22 @@ score가 95일 때 학점을 출력하세요.
 public class Q02_GradeSwitch {
     public static void main(String[] args) {
         int score = 95;
+        String grade = "";
 
         // TODO: switch문을 사용해 학점을 출력하세요.
+        switch (score/10){
+            case 10: case 9:
+                grade = "A";
+                break;
+            case 8:
+                grade = "B";
+                break;
+            case 7:
+                grade = "C";
+                break;
+            default:
+                grade = "D";
+        }
+        System.out.println("학점: " + grade);
     }
 }

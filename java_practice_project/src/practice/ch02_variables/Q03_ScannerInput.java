@@ -16,9 +16,13 @@ public class Q03_ScannerInput {
         Scanner sc = new Scanner(System.in);
 
         // TODO: 이름을 입력받으세요.
+        System.out.print("이름 입력: ");
+        String name = sc.nextLine();
         // TODO: 나이를 입력받으세요.
+        System.out.print("나이 입력: ");
+        int age = sc.nextInt();
         // TODO: 안내 문장을 출력하세요.
-
+        System.out.println("안녕하세요, " + name +"님. " + "내년 나이는 " + (age+1) + "세입니다.");
         sc.close();
     }
 }

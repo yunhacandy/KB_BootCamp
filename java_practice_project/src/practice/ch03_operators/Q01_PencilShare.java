@@ -15,7 +15,12 @@ public class Q01_PencilShare {
         int students = 13;
 
         // TODO: 1인당 받는 사탕 수를 계산하세요.
+        int share = candies / students;
         // TODO: 남는 사탕 수를 계산하세요.
+        int left = candies % students;
+
         // TODO: 결과를 출력하세요.
+        System.out.println("1인당 사탕 수: " + share);
+        System.out.println("남는 사탕 수: " + left);
     }
 }

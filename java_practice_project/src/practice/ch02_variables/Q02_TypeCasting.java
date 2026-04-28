@@ -15,7 +15,11 @@ public class Q02_TypeCasting {
         double price = 19.99;
 
         // TODO: score를 double로 변환해서 scoreDouble에 저장하세요.
+        double scoreDouble = (double)score;
         // TODO: price를 int로 변환해서 priceInt에 저장하세요.
+        int priceInt = (int)price;
         // TODO: 결과를 출력하세요.
+        System.out.println("scoreDouble:" + scoreDouble);
+        System.out.println("priceInt: " + priceInt);
     }
 }

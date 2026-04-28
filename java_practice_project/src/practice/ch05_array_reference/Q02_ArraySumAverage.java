@@ -23,7 +23,20 @@ public class Q02_ArraySumAverage {
         };
 
         // TODO: 중첩 for문으로 총합을 구하세요.
+        int sum = 0;
+        int count = 0;
+
+        for(int i = 0; i<scores.length; i++){
+            for(int j = 0; j<scores[i].length; j++){
+                sum += scores[i][j];
+                count++;
+            }
+        }
+
         // TODO: 전체 개수를 세어 평균을 구하세요.
+        double answer = (double) sum / count;
         // TODO: 결과를 출력하세요.
+        System.out.println("총합: "+sum);
+        System.out.printf("평균: %.3f\n", answer);
     }
 }

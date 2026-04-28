@@ -14,5 +14,12 @@ public class Q03_NullCheck {
         String name = null;
 
         // TODO: null 체크 후 안전하게 출력하세요.
+        if(name != null){
+            System.out.println(name.length());
+        }
+        else{
+            System.out.println("이름이 없습니다.");
+        }
+
     }
 }

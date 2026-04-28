@@ -17,6 +17,15 @@ package practice.ch02_variables;
 public class Q01_DeclareVariables {
     public static void main(String[] args) {
         // TODO: 알맞은 타입의 변수를 선언하고 값을 저장하세요.
+        String name = "김자바";
+        int age = 20;
+        double height = 168.5;
+        boolean isStudent = true;
         // TODO: 저장한 값을 형식에 맞게 출력하세요.
+
+        System.out.println("이름: "+ name);
+        System.out.println("나이: " + age);
+        System.out.println("키 :" + height);
+        System.out.println("학생 여부: "+isStudent);
     }
 }

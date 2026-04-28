@@ -13,5 +13,11 @@ public class Q01_OddEven {
         int num = 17;
 
         // TODO: if문을 사용하여 짝수/홀수를 출력하세요.
+        if(num % 2 ==0){
+            System.out.println("짝수");
+        }
+        else{
+            System.out.println("홀수");
+        }
     }
 }

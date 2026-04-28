@@ -11,5 +11,6 @@ public class Q02_TensCut {
         int value = 478;
 
         // TODO: 400이 출력되도록 계산식을 작성하세요.
+        System.out.println(value / 100 * 100);
     }
 }

@@ -10,5 +10,6 @@ package practice.ch01_start;
 public class Q01_PrintIntro {
     public static void main(String[] args) {
         // TODO: 위 문장을 출력하는 코드를 작성하세요.
+        System.out.println("자바 학슴의 첫걸음은 정확한 출력에서 시작됩니다.");
     }
 }

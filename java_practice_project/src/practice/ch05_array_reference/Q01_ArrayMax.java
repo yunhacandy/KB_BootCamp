@@ -13,6 +13,13 @@ public class Q01_ArrayMax {
         int[] scores = {88, 76, 92, 100, 65, 89};
 
         // TODO: for문을 사용해 최대값을 구하세요.
+        int max = Integer.MIN_VALUE;
+        for(int i = 0; i<scores.length; i++){
+            if(scores[i] > max){
+                max = scores[i];
+            }
+        }
         // TODO: 결과를 출력하세요.
+        System.out.println("최대값: " + max);
     }
 }

@@ -14,5 +14,11 @@ package practice.ch04_control;
 public class Q04_StarTriangle {
     public static void main(String[] args) {
         // TODO: 중첩 for문으로 별 삼각형을 출력하세요.
+        for(int i = 1; i<=5; i++){
+            for(int j = 0; j<i; j++){
+                System.out.print('*');
+            }
+            System.out.println();
+        }
     }
 }

@@ -16,6 +16,8 @@ public class Q03_TrapezoidArea {
         int height = 5;
 
         // TODO: 실수 결과가 나오도록 넓이를 계산하세요.
+        double answer = ((double) ((top + bottom) * height) / 2);
         // TODO: 결과를 출력하세요.
+        System.out.println("넓이: " + answer);
     }
 }

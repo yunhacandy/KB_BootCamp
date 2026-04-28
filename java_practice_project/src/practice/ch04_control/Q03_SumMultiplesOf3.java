@@ -12,6 +12,12 @@ public class Q03_SumMultiplesOf3 {
         int sum = 0;
 
         // TODO: for문을 사용하여 3의 배수 합을 구하세요.
+        for(int i = 1; i<=50; i++){
+            if(i % 3 == 0){
+                sum += i;
+            }
+        }
         // TODO: 결과를 출력하세요.
+        System.out.println("3의 배수 합: " + sum);
     }
 }
