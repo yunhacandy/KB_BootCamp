@@ -1,4 +1,4 @@
-package student.todo.p10;
+package java_oop_project.src.student.todo.p10;
 
 public class AccountTodo {
     String ano;
@@ -7,4 +7,9 @@ public class AccountTodo {
 
     // TODO 1: ano, owner, balance를 매개값으로 받는 생성자를 작성하세요.
     // TODO 2: this를 사용해 필드를 초기화하세요.
+    public AccountTodo(String ano, String owner, int balance){
+        this.ano = ano;
+        this.owner = owner;
+        this.balance = balance;
+    }
 }

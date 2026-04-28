@@ -12,7 +12,7 @@ class AnonymousTodo {
     }
 
     void method2(VehicleTodo v) {
-        v.run();
+        //v.run();
     }
 }
 
