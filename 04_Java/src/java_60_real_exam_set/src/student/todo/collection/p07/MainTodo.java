@@ -1,4 +1,4 @@
-package student.todo.collection.p07;
+package java_60_real_exam_set.src.student.todo.collection.p07;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -6,7 +6,16 @@ import java.util.Queue;
 public class MainTodo {
     public static void main(String[] args) {
         // TODO 1: Queue<String> 생성
+        Queue<String> queue = new LinkedList<>();
+
         // TODO 2: offer로 3개 추가
+        queue.offer("1");
+        queue.offer("2");
+        queue.offer("3");
+
         // TODO 3: poll 하며 출력
+        while(!queue.isEmpty()){
+            System.out.println(queue.poll());
+        }
     }
 }

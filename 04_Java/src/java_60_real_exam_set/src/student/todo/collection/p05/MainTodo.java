@@ -1,4 +1,4 @@
-package student.todo.collection.p05;
+package java_60_real_exam_set.src.student.todo.collection.p05;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,5 +11,8 @@ public class MainTodo {
         map.put("C", 30);
 
         // TODO 1: entrySet()을 이용해 key=value 형태로 출력
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
     }
 }
